@@ -1,0 +1,203 @@
+/* Andy Bell's CSS Reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  animation-duration: 0.01ms !important;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* This is the beggining of none-reset styles */
+
+/* Color Variables */
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-season: hsl(179, 100%, 13%);
+}
+
+body {
+    /* using flex to center the component */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font styles */
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Lexend Deca', sans-serif;
+    /* background styles */
+    background-color: white;
+}
+
+.column-container {
+    max-width: 22.5em;
+}
+
+.columns {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: white;
+}
+
+.columns img {
+    margin-bottom: 1.5rem;
+}
+
+.columns h2 {
+    /* font styles */
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    font-size: 2rem;
+    text-transform: uppercase;
+
+    /* element spacing */
+    margin-bottom: 1rem;
+}
+
+.columns p {
+    font-size: 1rem;
+    margin-bottom: 1em;
+}
+
+.columns button {
+    background-color: white;
+    padding: .75em 2em;
+    border-radius: 2em;
+}
+
+.column-1 {
+    background-color: var(--bright-orange);
+    border-radius: 1em 1em 0 0;
+}
+
+.column-1 button {
+    color: var(--bright-orange);
+}
+
+.column-2 {
+    background-color: var(--dark-cyan);
+}
+
+.column-2 button {
+    color: var(--dark-cyan);
+}
+
+.column-3 {
+    background-color: var(--very-dark-season);
+    border-radius: 0 0 1em 1em;
+}
+
+.column-3 button {
+    color: var(--very-dark-season);
+}
+
+/* Media Queries for Desktop Stylings */
+
+@media only screen and (min-width: 37.5rem) {
+
+    .column-container {
+        max-width: 56rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }    
+
+    .columns img {
+        margin-bottom: 2em;
+    }
+
+    .columns h2 {
+        margin-bottom: .75em;
+    }
+
+    .columns p {
+        margin-bottom: 5em;
+    }
+
+    .column-1 {
+        border-radius: 1em 0 0 1em;
+    }
+
+    .column-3 {
+        border-radius: 0 1em 1em 0;
+    }
+
+}
+
+
+
+
+
+
+
